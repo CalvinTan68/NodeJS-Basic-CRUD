@@ -1,7 +1,11 @@
+# About Project
+
+This is just a simple basic NodeJS server with functionality to Create, Read, Update, Delete (CRUD). Use this as boilerplate
+
 # How to use
 
 1. Clone the repo of course
-2. Install `Nodemon` globally (if you don't have nodemon yet)
+2. Install `nodemon` globally (if you don't have nodemon yet)
    ```shell
    npm install -g nodemon
    ```
@@ -19,10 +23,8 @@
    nodemon app
    ```
 
-# Base URL
+# Footnotes
 
-The base URL will be `localhost:5000/data`. You can test it in API platform such as Postman, Insomnia, etc.
-
-### Things to note
+- The base URL will be `localhost:5000/data`. You can test it in API platform such as Postman, Insomnia, etc.
 
 - This is using `import` method instead of `require`, which is using ES6 and it's better when the project is getting larger
