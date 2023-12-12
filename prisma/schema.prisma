@@ -10,10 +10,8 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Data {
+model data {
   id        String   @id @default(uuid())
   name      String
   createdAt DateTime @default(now())
-
-  @@map(name: "data") //to make the db table in lowercase
 }
