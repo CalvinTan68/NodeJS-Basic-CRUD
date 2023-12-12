@@ -15,7 +15,7 @@ export const getDataById = async (req, res) => {
   try {
     const response = await prisma.data.findUnique({
       where: {
-        id: Number(req.params.id),
+        id: req.params.id,
       },
     });
     res.status(200).json(response);
@@ -25,11 +25,11 @@ export const getDataById = async (req, res) => {
 };
 
 export const createData = async (req, res) => {
-  const { name } = req.body;
+  const body = req.body;
   try {
     const response = await prisma.data.create({
       data: {
-        name: name,
+        name: body.name,
       },
     });
     res.status(201).json(response);
@@ -39,14 +39,14 @@ export const createData = async (req, res) => {
 };
 
 export const updateData = async (req, res) => {
-  const { name } = req.body;
+  const body = req.body;
   try {
     const response = await prisma.data.update({
       where: {
         id: req.params.id,
       },
       data: {
-        name: name,
+        name: body.name,
       },
     });
     res.status(200).json(response);
